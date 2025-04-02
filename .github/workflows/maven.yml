@@ -3,10 +3,10 @@ name: Run RestAssured API Tests
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -27,4 +27,4 @@ jobs:
         run: mvn -version
 
       - name: Run API Tests with Debug Logs
-        run: mvn -X -f pom.xml -Dtest=restassured.EtETest test
+        run: mvn -X -e -f pom.xml test
