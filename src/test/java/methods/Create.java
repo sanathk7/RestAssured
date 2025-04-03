@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.given;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
+import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 public class Create {
@@ -16,12 +17,12 @@ public class Create {
 	 */
 	 
 public int createuser() {
-	/*
-	 * HashMap<String, Object> data = new HashMap<>(); data.put("name", "Sanath1");
-	 * data.put("age", "100");
-	 */
 	
-	  ObjectMapper objectMapper = new ObjectMapper();
+	 HashMap<String, Object> data = new HashMap<>(); data.put("name", "Sanath1");
+	  data.put("age", "100");
+	 
+	
+	/*  ObjectMapper objectMapper = new ObjectMapper();
       Map<String, Object> data;
 
       try {
@@ -29,7 +30,7 @@ public int createuser() {
           data = objectMapper.readValue(new File("C:\\Users\\sakum\\eclipse-workspace\\Maven_Project\\src\\test\\java\\testdata\\user_details.json"), Map.class);
       } catch (IOException e) {
           throw new RuntimeException("Failed to read JSON file", e);
-      }
+      }*/
     	int id;
     	id =given()
     			.contentType("application/json")
